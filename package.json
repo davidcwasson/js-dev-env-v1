@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/davidcwasson/js-dev-env-v1#readme",
   "dependencies": {
+    "bootstrap": "4.5.2",
     "chalk": "4.1.0",
-    "express": "4.17.1"
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "jquery": "3.5.1",
+    "morgan": "1.10.0",
+    "popper.js": "1.16.1"
   }
 }
