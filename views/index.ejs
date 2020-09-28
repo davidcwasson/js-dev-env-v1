@@ -7,6 +7,16 @@
       <div class="jumbotron">Serving up HTML</div>
     </div>
 
+    <h1>
+      Welcome to <%=title%>
+    </h1>
+
+    <ul>
+      <%for(var i=0; i<list.length; i++){%>
+        <li><%= list[i] %></li>
+      <%}%>
+    </ul>
+
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
   </body>
