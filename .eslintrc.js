@@ -10,7 +10,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  root: true,
   rules: {
-    'comma-dangle': 0
+    'comma-dangle': 0,
+    'no-console': 1
   },
 };
