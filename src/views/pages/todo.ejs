@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/header'); %>
+</head>
+
+<body>
+
+  <%- include('../partials/nav'); %>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>To Do List</h1>
+            <span class="subheading">Let's get stuff done.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+        <!-- iterate over todos -->
+        <%for(let i=0; i<todos.length; i++) {%>
+          <div class="post-preview">
+            <a href="/todo/<%=todos[i]._id%>">
+              <h2 class="post-title">
+                <%=todos[i].title%>
+              </h2>
+              <h3 class="post-subtitle">
+                Genre: <%=todos[i].genre%>, Completed: <%=todos[i].completed%>
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#"><%=todos[i].author%></a>
+              (repeat <%=todos[i].repeat%>)</p>
+          </div>
+          <hr>
+        <%}%>
+        <!-- end of todos -->
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <%- include('../partials/footer'); %>
+
+  </body>
+
+  </html>

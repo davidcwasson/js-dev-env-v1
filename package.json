@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint app.js",
     "lint-fix": "./node_modules/.bin/eslint app.js --fix",
-    "start": "DEBUG=app nodemon app.js",
+    "start": "DEBUG=app,app:* nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,13 +20,17 @@
   },
   "homepage": "https://github.com/davidcwasson/js-dev-env-v1#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.0",
     "bootstrap": "4.5.2",
     "chalk": "4.1.0",
     "debug": "4.1.1",
+    "dotenv": "8.2.0",
     "ejs": "3.1.5",
     "express": "4.17.1",
     "jquery": "3.5.1",
+    "mongodb": "3.6.2",
     "morgan": "1.10.0",
+    "mysql2": "2.2.5",
     "nodemon": "2.0.4",
     "popper.js": "1.16.1"
   },
