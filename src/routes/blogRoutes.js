@@ -5,6 +5,14 @@ const mysql = require('../utils/mysql.js');
 
 const blogRouter = express.Router();
 
+blogRouter.use((req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.redirect('/');
+  }
+});
+
 blogRouter.route('/')
   .get((req, res) => {
     (async function getAllBlogs() {
